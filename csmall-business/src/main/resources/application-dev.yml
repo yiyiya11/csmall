@@ -1,0 +1,9 @@
+spring:
+  application:
+    # 为当前项目起名，这个名字会被Nocos获取并记录，用于之后的维度为调用
+    name: nacos-business
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        ephemeral: false
