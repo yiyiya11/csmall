@@ -1,6 +1,7 @@
 package cn.tedu.csmall.business.controller;
 
 import cn.tedu.csmall.business.service.IBusinessService;
+import cn.tedu.csmall.commons.pojo.order.dto.OrderAddDTO;
 import cn.tedu.csmall.commons.restful.JsonResult;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,8 @@ public class BusinessController {
 
 
     @PostMapping("/buy")
-    public JsonResult buy(){
-        businessService.buy();
+    public JsonResult buy(OrderAddDTO orderAddDTO){
+        businessService.buy(orderAddDTO);
         return JsonResult.ok("你进来啦，哈哈哈你好棒");
     }
 }
