@@ -17,3 +17,10 @@ dubbo:
     address: nacos://localhost:8848
   consumer:
     check: false
+
+seata:
+  tx-service-group: csmall_group #定义失误的分组，一般是以项目为单位的，方便与其他项目区分
+  service:
+    vgroup-mapping:
+      csmall_group: default # csmall_group分组的配置，default会默认配置Seata
+      default: localhost:8091

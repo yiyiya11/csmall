@@ -3,6 +3,11 @@ spring:
     # 为当前项目起名，这个名字会被Nocos获取并记录，用于之后的维度为调用
     name: nacos-business
   cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        #执行限流端口号，每个项目需要不同的端口号
+        port: 8722
     nacos:
       discovery:
         server-addr: localhost:8848
@@ -14,3 +19,10 @@ dubbo:
     address: nacos://localhost:8848
   consumer:
     check: false
+
+seata:
+  tx-service-group: csmall_group #定义失误的分组，一般是以项目为单位的，方便与其他项目区分
+  service:
+    vgroup-mapping:
+      csmall_group: default # csmall_group分组的配置，default会默认配置Seata
+      default: localhost:8091

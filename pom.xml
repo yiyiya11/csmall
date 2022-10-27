@@ -18,11 +18,12 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>csmoll-stock</module>
+        <module>csmall-stock</module>
         <module>csmall-commons</module>
         <module>csmall-business</module>
         <module>csmall-cart</module>
-        <module>camall-order</module>
+        <module>csmall-order</module>
+        <module>gateway</module>
     </modules>
     <!--声明父项目中定义的版本号，（这些内容本职上是变量的声明）-->
     <properties>
